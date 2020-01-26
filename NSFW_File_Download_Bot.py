@@ -17,7 +17,7 @@ while 1==1:
     list3 = os.listdir(dir3)
 
     number_files = len(list1)
-    if number_files > 200:
+    if number_files > 400:
         sys.quit()
     else:
         name_file = str(number_files)
