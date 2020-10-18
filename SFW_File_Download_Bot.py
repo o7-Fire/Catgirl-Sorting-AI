@@ -8,17 +8,17 @@ import shutil
 import sys
 
 while 1==1:
-    dir1 = "./all_data/"
-    dir2 = "./New_Data/"
-    dir3 = "./train/"
+    dir1 = "C:/Path/To/IMG Sorter/all_data/" #Path to all data folder
+    dir2 = "C:/Path/To/IMG Sorter/New_Data/" #Path to new data folder
+    dir3 = "C:/Path/To/IMG Sorter/train/"    #Path to train data folder
 
     list1 = os.listdir(dir1) 
     list2 = os.listdir(dir2)
     list3 = os.listdir(dir3)
 
     number_files = len(list1)
-    if number_files > 200:
-        sys.quit()
+    if number_files > 400:
+        sys.exit()
     else:
         name_file = str(number_files)
 
@@ -39,7 +39,8 @@ while 1==1:
         print("Downloading", source)
         #Saving File To Folder
         name = "sfw." + name_file + ".jpg"
-        full_name1 = os.path.join(dir2, name)
+        new_name = name_file + ".jpg"
+        full_name1 = os.path.join(dir2, new_name)
         full_name2 = os.path.join(dir1, name)
         full_name3 = os.path.join(dir3, name)
 
